@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+/* نحدد نوع الخط و الارتفاع و لون الخلفية للصفحة كاملة  */
+body{
+    font-family: 'Roboto Condensed'sans-serif ;
+    margin: 0px;
+    height: auto;
+    background-color: rgb(245, 243, 243);
+}
+/* الصفحة مقسمة لعنصرين الأول هو البوكس الاساسي و الثاني هو تذييل الصفحة  */
+/* البوكس الاساسي  */
+
+main{
+    max-width: 900px;
+    margin: auto;
+    /* نحدد حجم البوكس و نعطيه شادو */
+    /* ,نحدد الشادو بقيمتين نفصل بينهم بفاصلة  
+    القيمة الأولى :  offset-x | offset-y | blur-radius | color 
+    القيمة الثانية :  offset-x | offset-y | blur-radius | color */
+    box-shadow: 30px 0px 30px rgba(0, 0, 0, 0.2) ,-30px 0px 30px rgba(0, 0, 0, 0.2) ;
+}
+/* الجزء الثاني ذيل الصفحة  */
+footer{
+    margin: auto;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #333;
+}
+
+#landing{
+    background-color: #f4f4f3;
+}
+.landing-text{
+    text-align: center;
+    display: flex;
+    flex: 0 1 40vw;
+    /* التوسيط افقيا */
+    justify-content: center;
+    /* التوسيط عموديا */
+    align-items: center;
+    height: 50vh;
+    padding-left: 1rem;
+    padding-left: 1rem;
+
+}
+#landing-text h2{
+    color:#888
+}
+.btn{
+    border: 1px #888 solid;
+    display: inline-block;
+    margin: 2rem 0;
+    border-radius: 50px;
+    padding: .5rem 2rem;
+    text-decoration: none;
+    color: #888;
+    /* الانتقال : نحدد الخواص , الوقت , نوع الانتقال و يكون في العنصر الاساسي  */
+    transition: all 1s ease;
+}
+.btn:hover{
+    /* عند تمرير الماوس يحدث التغيير بحسب الطريقة المحددة بالعنصر الاساسي */
+    background: #333;
+    color: #f4f4f3;
+}
+
+#landing-image{
+    background: url("img/cover.jpg");
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    flex: 0 1 60vw;
+}
+#header{
+    padding: 1.5rem;
+    text-align: center;
+    columns: #f4f4f4;
+    background-color: #888;
+}
+#header h2{
+    border-left: #f4f4f4 2px dotted;
+    border-right: #f4f4f4 2px dotted;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: inline-block;
+}
+.caption{
+    padding: .7rem;
+    text-align: center;
+}
+h1{
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    margin: 0px;
+    
+}
+h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin: 0px;
+}
+h3{
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+img{
+    display: block;
+    width: 100%;
+}
+
+/* حجم الشاشات  */
+@media(min-width:500px){
+    #landing{
+        display: flex;
+        height: 100%;
+    }
+    .landing-text{
+        height: 100vh;
+
+    }
+    #landing-image{
+        height: 100vh;
+
+    }
+}
+@media(min-width:700px){
+   .btn{
+       padding: 1rem 3rem;
+   } 
+}
